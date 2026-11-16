@@ -4,7 +4,6 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#f4f7f5"><meta name="description" content="Ứng dụng chấm công bằng khuôn mặt trên điện thoại">
   <title>Chấm công khuôn mặt</title>
-  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
   <style>
     :root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#17251d;background:#f4f7f5;font-synthesis:none;--green:#13794d;--muted:#758179;--line:#e7ece8}
     *{box-sizing:border-box}body{margin:0;min-height:100vh;padding:env(safe-area-inset-top) 14px env(safe-area-inset-bottom);background:radial-gradient(ellipse at 52% -18%,#d9f1e3 0,transparent 45%),#f4f7f5}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:wait}.app{width:min(100%,520px);margin:auto;padding:14px 0 28px}.top{display:flex;align-items:center;gap:11px;margin:5px 3px 18px}.logo{width:43px;height:43px;border-radius:15px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:23px}.brand{font-weight:750;font-size:17px}.subbrand{font-size:11px;color:var(--muted);margin-top:3px}.topright{margin-left:auto;text-align:right;font-size:11px;color:#607067}.topright b{display:block;color:#263a2f;font-size:12px;margin-bottom:3px}
@@ -34,6 +33,7 @@
 <dialog id="enrollDialog"><h2>Đăng ký nhân viên</h2><p>Nhập tên, sau đó nhìn thẳng vào camera. Hệ thống sẽ lấy 3 mẫu khuôn mặt để cải thiện khả năng nhận diện.</p><input class="field" id="employeeName" placeholder="Họ và tên" autocomplete="name" maxlength="60"><div class="dialogactions"><button class="secondary" id="cancelEnroll">Hủy</button><button class="primary" id="saveEnroll" style="padding:11px">Bắt đầu quét</button></div></dialog>
 <dialog id="confirmDialog"><h2 id="confirmTitle">Xác nhận</h2><p id="confirmText"></p><div class="dialogactions"><button class="secondary" id="noConfirm">Hủy</button><button class="primary" id="yesConfirm" style="padding:11px">Xác nhận</button></div></dialog>
 <div class="toast" id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
 <script>
 (()=>{
   'use strict';
